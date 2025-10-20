@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flask Notes</title>
+</head>
+<body>
+  <h2>Add a Note</h2>
+  <form method="POST">
+    <input type="text" name="note" required>
+    <button type="submit">Add</button>
+  </form>
+  <h3>Saved Notes:</h3>
+  <ul>
+    {% for note in notes %}
+      <li>{{ note[1] }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
